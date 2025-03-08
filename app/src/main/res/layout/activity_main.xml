@@ -17,8 +17,15 @@
         android:layout_gravity="center"
         android:textSize="30dp"
         android:textColor="#372504"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wybierz kawę:"
+        android:layout_margin="7.5dp"
+        android:textColor="#231703"
+        android:textSize="20dp" />
 
     <RadioButton
         android:id="@+id/rbEspresso"
@@ -30,6 +37,13 @@
         android:textColor="#231703"
         android:textSize="17dp"/>
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="espresso"
+        android:scaleType="centerCrop"
+        android:src="@drawable/espressozdj"/>
+
     <RadioButton
         android:id="@+id/rbCappuccino"
         android:layout_width="wrap_content"
@@ -40,6 +54,13 @@
         android:textColor="#231703"
         android:textSize="17dp"/>
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="cappuccino"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cappuccinozdj"/>
+
     <RadioButton
         android:id="@+id/rbLatte"
         android:layout_width="wrap_content"
@@ -49,6 +70,14 @@
         android:textStyle="bold"
         android:textColor="#231703"
         android:textSize="17dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="latte"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lattezdj"/>
+
 
 
 </LinearLayout>
