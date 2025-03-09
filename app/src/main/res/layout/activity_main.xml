@@ -75,24 +75,38 @@
                 android:scaleType="centerCrop"
                 android:layout_marginStart="20dp"/>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dodatki:"
-        android:textSize="20dp"
-        android:textColor="#231703"
-        android:layout_margin="7.5dp"/>
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dodatki:"
+            android:textSize="20dp"
+            android:textColor="#231703"
+            android:layout_marginRight="10dp"/>
 
-    <CheckBox
-        android:id="@+id/mleko"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mleko"/>
+        <CheckBox
+            android:id="@+id/mleko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mleko"/>
 
-    <CheckBox
-        android:id="@+id/cukier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cukier" />
+        <CheckBox
+            android:id="@+id/cukier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cukier"/>
+    </LinearLayout>
+        <SeekBar
+            android:id="@+id/ilosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="5"
+            android:progressTint="#372504"
+            android:backgroundTint="#231703"
+            android:thumbTint="#964b00"/>
 </LinearLayout>
