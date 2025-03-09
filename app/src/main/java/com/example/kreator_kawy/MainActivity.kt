@@ -3,14 +3,19 @@ package com.example.kreator_kawy
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Radio
+import android.util.Log
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.SeekBar
 import android.widget.TextView
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,6 +63,30 @@ class MainActivity : AppCompatActivity() {
                 //kod
             }
         })
-    }
 
+        val button = findViewById<Button>(R.id.submit);
+        val mleko = findViewById<CheckBox>(R.id.mleko);
+        val cukier = findViewById<CheckBox>(R.id.cukier)
+
+        button.setOnClickListener{
+            val wybranaKawa: String = when{
+                imgEspresso.isChecked -> "Espresso"
+                imgCappuccino.isChecked -> "Cappuccino"
+                imgLatte.isChecked -> "Latte"
+                else -> "Brak wyboru!"
+            }
+
+            val dodatki = mutableListOf<String>()
+            if(mleko.isChecked) dodatki.add("mleko")
+            if(cukier.isChecked) dodatki.add("cukier")
+            val tekstDodatki = if (dodatki.isEmpty()) "brak dodatków" else dodatki.joinToString(", ")
+            val ilosc = seekBar.progress
+
+            Toast.makeText(this, "Zamówiono!", Toast.LENGTH_LONG).show()
+
+            val podsumowanie: String = ("Zamówiono $ilosc kaw $wybranaKawa, dodatki: $tekstDodatki")
+
+            Log.d("Zamówienie: ", podsumowanie)
+        }
+    }
 }
