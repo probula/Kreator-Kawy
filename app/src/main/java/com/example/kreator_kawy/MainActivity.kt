@@ -1,5 +1,6 @@
 package com.example.kreator_kawy
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Radio
 import android.widget.ImageView
@@ -8,8 +9,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.SeekBar
+import android.widget.TextView
+
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,5 +39,25 @@ class MainActivity : AppCompatActivity() {
         imgLatte.setOnClickListener{
             image.setImageResource(R.drawable.lattezdj)
         }
+
+        val seekBar: SeekBar = findViewById(R.id.ilosc)
+        val wyswietl: TextView = findViewById(R.id.wyswietlSB)
+
+        wyswietl.text = "Ilość kaw: ${seekBar.progress}"
+
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                wyswietl.text = "Ilość kaw: $progress"
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                //kod
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                //kod
+            }
+        })
     }
+
 }

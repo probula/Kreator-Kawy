@@ -106,7 +106,18 @@
             android:layout_height="wrap_content"
             android:max="10"
             android:progress="5"
+            android:min="1"
             android:progressTint="#372504"
             android:backgroundTint="#231703"
             android:thumbTint="#964b00"/>
+    <TextView
+        android:id="@+id/wyswietlSB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ilość kaw: 5"
+        android:textSize="18dp"
+        android:textColor="#372504"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
 </LinearLayout>
