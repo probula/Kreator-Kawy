@@ -10,22 +10,16 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kreator zamówienia kawy"
-        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:textSize="30dp"
-        android:textColor="#372504"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wybierz kawę"
-        android:layout_margin="7.5dp"
-        android:textColor="#231703"
-        android:textSize="20dp" />
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:background="#6F4E37"
+        android:gravity="center"
+        android:padding="5dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,30 +69,39 @@
                 android:scaleType="centerCrop"
                 android:layout_marginStart="20dp"/>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodatki:"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="#6F4E37"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="2dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dodatki:"
-            android:textSize="20dp"
-            android:textColor="#231703"
-            android:layout_marginRight="10dp"/>
-
         <CheckBox
             android:id="@+id/mleko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mleko"/>
+            android:text="Mleko"
+            android:textStyle="bold"
+            android:paddingRight="5dp"
+            android:layout_marginTop="5dp"/>
 
         <CheckBox
             android:id="@+id/cukier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cukier"/>
+            android:text="Cukier"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
         <SeekBar
             android:id="@+id/ilosc"
@@ -109,22 +112,27 @@
             android:min="1"
             android:progressTint="#372504"
             android:backgroundTint="#231703"
-            android:thumbTint="#964b00"/>
+            android:thumbTint="#964b00"
+            android:paddingBottom="15dp"
+            android:layout_marginBottom="15dp"/>
     <TextView
         android:id="@+id/wyswietlSB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ilość kaw: 5"
-        android:textSize="18dp"
-        android:textColor="#372504"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_margin="10dp"/>
+        android:background="#6F4E37"
+        android:padding="2dp"/>
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#38250E"
-        android:text="Złóż zamówienie"/>
+        android:text="Złóż zamówienie"
+        android:layout_marginTop="10dp"
+        />
 </LinearLayout>
